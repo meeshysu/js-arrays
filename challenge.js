@@ -77,20 +77,44 @@ let elizabethSanger = {
   const voterRegistrationStringBuilder = () => {
     const newString = `<a href="https://${elizabethSanger.voterRegistrationUrl}" target="_blank">Register to vote here dude!</a>`;
     printToDom(newString, 'voterRegistration');
-  }
-voterRegistrationStringBuilder();
+  };
+
 
   const donationFormStringBuilder = () => {
       const newString = `<a href="https://${elizabethSanger.donationFormUrl}" target="_blank">Donate here yo!</a>`;
       printToDom(newString, 'donationForm');
   };
+
+
+ const statementStringBuilder = () => {
+     let newString = '';
+     for (let i = 0; i < elizabethSanger.statements.length; i++) {
+        newString += `<div class="statement">`;
+        newString +=   `<h3>${elizabethSanger.statements[i].statement}</h3>`;
+        newString +=   `<h6>${elizabethSanger.statements[i].category}</h6>`;
+        newString += `</div>`;
+     }
+     printToDom(newString, 'statements');//has to be outside of the for loop!
+ };
+
+ const eventsStringBuilder = () => {
+     let newString ='';
+     for (let i = 0; i <elizabethSanger.events.length; i++){
+
+     }
+
+ }
+
+
+voterRegistrationStringBuilder();
 donationFormStringBuilder();
+statementStringBuilder();
+eventsStringBuilder();
 
 
-
-
-
-  // part 3:
-//   const updateVoterRegistration = () => {
-//       voterRegistrationStringBuilder();
-//   }
+  //part 3:
+  const updateVoterRegistration = (newUrl) => {
+      elizabethSanger.voterRegistrationUrl = newUrl;
+      voterRegistrationStringBuilder();
+  }
+updateVoterRegistration('classtracker.zoeames.com');
