@@ -35,3 +35,25 @@ if(word === reverseWord) {
 palChecker('mom');
 palChecker('monkeybutt');
 palChecker('racecar');
+
+
+let animals = ['otter', 'cat', 'dog', 'bird']
+
+const lastItem = animals.pop();// this should remove bird
+const firstItem = animals.shift();//removes the first item, otter
+animals.push('bat');
+animals.unshift('baby hippo');
+console.log('animals');
+
+//FOR LOOPS:
+//1. What is your starting value? Most of the time it's going to be - 0
+//2. What is your stopping value? Most of the time something.length
+//3. How are you incrementing? +1 
+
+//for(starting;stopping; increment){
+    //do something here
+//}
+
+for(let i = 0; i < animals.length; i++){
+    console.log(animals[i]);
+}
