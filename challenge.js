@@ -100,10 +100,27 @@ let elizabethSanger = {
  const eventsStringBuilder = () => {
      let newString ='';
      for (let i = 0; i <elizabethSanger.events.length; i++){
-
+        newString += `<div class="events">`;
+        newString +=   `<h3>${elizabethSanger.events[i].date}</h3>`;
+        newString +=   `<h4>${elizabethSanger.events[i].title}</h4>`;
+        newString +=   `<h5>${elizabethSanger.events[i].description}<h5>`;
+        newString += `</div>`;
      }
+     printToDom(newString, 'events');
+};
 
- }
+const volunteersStringBuilder = () => {
+    let newString = '';
+    for (let i =0; i < elizabethSanger.volunteers.length){
+        newString += `<div class="volunteers">`;
+        newString +=   `<h3>${elizabethSanger.volunteers.name}</h3>`;
+        newString +=   `<h4>${elizabethSanger.volunteers.address}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers.email}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers.phone}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers.availability}</h4>`;
+        newString +=   `<h3>${elizabethSanger.volunteers.activities}</h3>`;
+    }
+};
 
 
 voterRegistrationStringBuilder();
