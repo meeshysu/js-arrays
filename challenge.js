@@ -80,6 +80,11 @@ let elizabethSanger = {
   };
 
 
+  const congressionalDistrictBuilder = () => {
+    const newString = `<p>Elizabeth Sanger's Congressional District: ${elizabethSanger.congressionalDistrict}</p>`;
+    printToDom(newString, 'congressionalDistrict');
+  };
+
   const donationFormStringBuilder = () => {
       const newString = `<a href="https://${elizabethSanger.donationFormUrl}" target="_blank">Donate here yo!</a>`;
       printToDom(newString, 'donationForm');
@@ -100,21 +105,107 @@ let elizabethSanger = {
  const eventsStringBuilder = () => {
      let newString ='';
      for (let i = 0; i <elizabethSanger.events.length; i++){
-
+        newString += `<div class="events">`;
+        newString +=   `<h3>${elizabethSanger.events[i].date}</h3>`;
+        newString +=   `<h4>${elizabethSanger.events[i].title}</h4>`;
+        newString +=   `<h5>${elizabethSanger.events[i].description}<h5>`;
+        newString += `</div>`;
      }
+     printToDom(newString, 'events');
+};
 
- }
+const volunteersStringBuilder = () => {
+    let newString = '';
+    for (let i =0; i < elizabethSanger.volunteers.length; i++){
+        newString += `<div class="volunteers">`;
+        newString +=   `<h3>${elizabethSanger.volunteers[i].name}</h3>`;
+        newString +=   `<h4>${elizabethSanger.volunteers[i].address}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers[i].email}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers[i].phone}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers[i].availability}</h4>`;
+        newString +=   `<h4>${elizabethSanger.volunteers[i].activities}</h4>`;
+        newString += `</div>`;
+    }
+    printToDom(newString, 'volunteers');
+};
+
+const newVolunteerString = (newNew) => {
+  elizabethSanger.volunteers = newNew;
+  volunteersStringBuilder();
+}
+newNew.push("No thanks");
+
+// const updateVoterRegistration = (newUrl) => {
+//   elizabethSanger.voterRegistrationUrl = newUrl;
+//   voterRegistrationStringBuilder();
+// }
+// updateVoterRegistration('classtracker.zoeames.com');
+
+const biographyStringBuilder = () => {
+  const newString = `<p>${elizabethSanger.biography}</p>`;
+  printToDom(newString, 'biography');
+};
 
 
+const imagesStringBuilder = () => {
+  let newString = '';
+  for (let i = 0; i < elizabethSanger.images.length; i++){
+    newString += `<div class = "images"`;
+    newString +=   `<h4>${elizabethSanger.images[i].imageUrl}"</h4`;
+    newString +=   `<h4>${elizabethSanger.images[i].description}</h4>`;
+    newString +=   `<h4>${elizabethSanger.images[i].type}</h4>`;
+    newString += `</div>`;
+  }
+  printToDom(newString, 'images');
+};
+
+
+const missionStatementStringBuilder = () => {
+  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
+  printToDom(newString, 'missionStatement');
+};
+
+
+
+missionStatementStringBuilder();
 voterRegistrationStringBuilder();
+congressionalDistrictBuilder();
 donationFormStringBuilder();
 statementStringBuilder();
 eventsStringBuilder();
-
+volunteersStringBuilder();
+biographyStringBuilder();
+imagesStringBuilder();
+ 
 
   //part 3:
-  const updateVoterRegistration = (newUrl) => {
-      elizabethSanger.voterRegistrationUrl = newUrl;
-      voterRegistrationStringBuilder();
+const updateVoterRegistration = (newUrl) => {
+    elizabethSanger.voterRegistrationUrl = newUrl;
+    voterRegistrationStringBuilder();
   }
 updateVoterRegistration('classtracker.zoeames.com');
+
+const updateDistrict = (newDistrict) => {
+  elizabethSanger.congressionalDistrict = newDistrict;
+  congressionalDistrictBuilder();
+}
+updateDistrict("234587");
+
+const updateDonationForm = (newForm) => {
+  elizabethSanger.donationFormUrl = newForm;
+  donationFormStringBuilder();
+}
+updateDonationForm('https://www.gourmetcheesedetective.com/American-artisanal-cheeses.html');
+
+const updateBiography = (newBio) => {
+  elizabethSanger.biography = newBio;
+  biographyStringBuilder();
+}
+updateBiography("I am better than Bobby Newport. That is all.");
+
+const updateStatement = (newStatement) => {
+  elizabethSanger.missionStatement = newStatement;
+  missionStatementStringBuilder();
+}
+updateStatement("Let's make Pawnee great again!");
+
