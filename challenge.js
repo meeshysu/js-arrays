@@ -130,14 +130,18 @@ const volunteersStringBuilder = () => {
     printToDom(newString, 'volunteers');
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const biographyStringBuilder = () => {
   const newString = `<p>${elizabethSanger.biography}</p>`;
   printToDom(newString, 'biography');
 };
 
+
+
+const missionStatementStringBuilder = () => {
+  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
+  printToDom(newString, 'missionStatement');
+};
 
 const imagesStringBuilder = () => {
   let newString = '';
@@ -152,53 +156,6 @@ const imagesStringBuilder = () => {
 };
 
 
-const missionStatementStringBuilder = () => {
-  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
-  printToDom(newString, 'missionStatement');
-};
-
-
-=======
-// const newVolunteerString = (newNew) => {
-//   elizabethSanger.volunteers = newNew;
-//   volunteersStringBuilder();
-// }
-// newNew.push("No thanks");
-
-// const updateVoterRegistration = (newUrl) => {
-//   elizabethSanger.voterRegistrationUrl = newUrl;
-//   voterRegistrationStringBuilder();
-// }
-// updateVoterRegistration('classtracker.zoeames.com');
-=======
->>>>>>> 01ac5c32d088cc1e93657da0a65d616e2f7f2736
-
-const biographyStringBuilder = () => {
-  const newString = `<p>${elizabethSanger.biography}</p>`;
-  printToDom(newString, 'biography');
-};
-
-
-const imagesStringBuilder = () => {
-  let newString = '';
-  for (let i = 0; i < elizabethSanger.images.length; i++){
-    newString += `<div class = "images"`;
-    newString +=   `<h4>${elizabethSanger.images[i].imageUrl}"</h4`;
-    newString +=   `<h4>${elizabethSanger.images[i].description}</h4>`;
-    newString +=   `<h4>${elizabethSanger.images[i].type}</h4>`;
-    newString += `</div>`;
-  }
-  printToDom(newString, 'images');
-};
-
-
-const missionStatementStringBuilder = () => {
-  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
-  printToDom(newString, 'missionStatement');
-};
-
-
->>>>>>> 83943f7506f1e8d892f552bbecc8459f516073dd
 
 missionStatementStringBuilder();
 voterRegistrationStringBuilder();
