@@ -130,8 +130,6 @@ const volunteersStringBuilder = () => {
     printToDom(newString, 'volunteers');
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const biographyStringBuilder = () => {
   const newString = `<p>${elizabethSanger.biography}</p>`;
@@ -158,20 +156,7 @@ const missionStatementStringBuilder = () => {
 };
 
 
-=======
-// const newVolunteerString = (newNew) => {
-//   elizabethSanger.volunteers = newNew;
-//   volunteersStringBuilder();
-// }
-// newNew.push("No thanks");
 
-// const updateVoterRegistration = (newUrl) => {
-//   elizabethSanger.voterRegistrationUrl = newUrl;
-//   voterRegistrationStringBuilder();
-// }
-// updateVoterRegistration('classtracker.zoeames.com');
-=======
->>>>>>> 01ac5c32d088cc1e93657da0a65d616e2f7f2736
 
 const biographyStringBuilder = () => {
   const newString = `<p>${elizabethSanger.biography}</p>`;
@@ -198,7 +183,7 @@ const missionStatementStringBuilder = () => {
 };
 
 
->>>>>>> 83943f7506f1e8d892f552bbecc8459f516073dd
+
 
 missionStatementStringBuilder();
 voterRegistrationStringBuilder();
