@@ -114,6 +114,7 @@ let elizabethSanger = {
      printToDom(newString, 'events');
 };
 
+
 const volunteersStringBuilder = () => {
     let newString = '';
     for (let i =0; i < elizabethSanger.volunteers.length; i++){
@@ -129,6 +130,7 @@ const volunteersStringBuilder = () => {
     printToDom(newString, 'volunteers');
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const biographyStringBuilder = () => {
@@ -168,6 +170,8 @@ const missionStatementStringBuilder = () => {
 //   voterRegistrationStringBuilder();
 // }
 // updateVoterRegistration('classtracker.zoeames.com');
+=======
+>>>>>>> 01ac5c32d088cc1e93657da0a65d616e2f7f2736
 
 const biographyStringBuilder = () => {
   const newString = `<p>${elizabethSanger.biography}</p>`;
@@ -205,9 +209,11 @@ eventsStringBuilder();
 volunteersStringBuilder();
 biographyStringBuilder();
 imagesStringBuilder();
- 
 
-  //part 3:
+
+
+
+
 const updateVoterRegistration = (newUrl) => {
     elizabethSanger.voterRegistrationUrl = newUrl;
     voterRegistrationStringBuilder();
@@ -238,3 +244,27 @@ const updateStatement = (newStatement) => {
 }
 updateStatement("Let's make Pawnee great again!");
 
+const newUpdateVolunteer = () => {
+  let newVolunteer = elizabethSanger.volunteers.push({name: 'Andy', address: '2635 Muncy Avenue', email: 'dwyerandy@email.com', phone: '6731245678', availability: 'all day every day', activities: 'being bert macklin'});
+  volunteersStringBuilder();
+};
+
+const newUpdateEvent = () => {
+  let newEvent = elizabethSanger.events.push({date: 'Tomorrow', title: 'Cupcake Banquet', description: 'Eating cupcakes'});
+  eventsStringBuilder();
+};
+
+const newUpdateImages = () => {
+  let newImages = elizabethSanger.images.push({imageUrl: 'https://www.oldtrapper.com', description: 'What we eat on the road', type: 'constituent jerky'})
+  imagesStringBuilder();
+};
+
+const newUpdateStatements = () => {
+  let newStatements = elizabethSanger.statements.push({statement: 'All racoons must have rabies shots! I promise you!', category: 'Parks'});
+  statementStringBuilder();
+};
+
+newUpdateEvent();
+newUpdateVolunteer();
+newUpdateImages();
+newUpdateStatements();
