@@ -2,23 +2,88 @@
      background-color: slategray;
  }
 
- #title {
-    margin: auto;
+ #bigTitle p {
     text-align: center;
-    border: double black 2px;
-    font-family: 'Lora', serif;
+    font-size: 75px;
+    padding: auto;
+    margin: 0;
 }
 
-#statements {
-    background-color: chartreuse;
-    border: 1px dotted black;
-    width: 50%;
+#littleTitle p {
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px black dotted;
+    padding-bottom: 20px;
 }
 
 #congressionalDistrict {
-    margin: auto;
+    margin: 20px;
+    padding: 20px;
     text-align: center;
     font-weight: bold;
-
 }
 
+#donationForm {
+    margin: auto;
+    text-align: center;
+}
+
+#donationForm:before {
+    content: "Want to donate to Elizabeth's campaign?   ";
+}
+
+#statements {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;   
+    justify-content: space-evenly;
+    text-align: center;
+    font-variant: small-caps;
+    margin: 20px;
+    padding: 40px;
+}
+
+#events {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+}
+
+#volunteers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+}
+
+#biography {
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#voterRegistration {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}

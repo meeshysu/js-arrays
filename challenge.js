@@ -4,9 +4,9 @@ console.log('yo wasssuppp in challenge')
 let elizabethSanger = {
     congressionalDistrict: 5,
     statements: [
-      {statement: "pie for everyone", category: "Jobs"},
-      {statement: "no taxes on pie", category: "Taxes"},
-      {statement: "No working on friday", category: "Jobs"}
+      {category: "In Regards to Jobs:", statement: "Pie for everyone"},
+      {category: "In Regard to Taxes:", statement: "No taxes on pie"},
+      {category: "In Regard to Jobs:", statement: "No working on friday"}
     ],
     donationFormUrl: 'www.google.com',
     events: [
@@ -95,8 +95,8 @@ let elizabethSanger = {
      let newString = '';
      for (let i = 0; i < elizabethSanger.statements.length; i++) {
         newString += `<div class="statement">`;
-        newString +=   `<h3>${elizabethSanger.statements[i].statement}</h3>`;
-        newString +=   `<h6>${elizabethSanger.statements[i].category}</h6>`;
+        newString +=   `<h2>${elizabethSanger.statements[i].category}</h2>`;
+        newString +=   `<h4>${elizabethSanger.statements[i].statement}</h4>`;
         newString += `</div>`;
      }
      printToDom(newString, 'statements');//has to be outside of the for loop!
@@ -106,7 +106,7 @@ let elizabethSanger = {
      let newString ='';
      for (let i = 0; i <elizabethSanger.events.length; i++){
         newString += `<div class="events">`;
-        newString +=   `<h3>${elizabethSanger.events[i].date}</h3>`;
+        newString +=   `<h3><u>${elizabethSanger.events[i].date}</u></h3>`;
         newString +=   `<h4>${elizabethSanger.events[i].title}</h4>`;
         newString +=   `<h5>${elizabethSanger.events[i].description}<h5>`;
         newString += `</div>`;
@@ -137,6 +137,12 @@ const biographyStringBuilder = () => {
 };
 
 
+
+const missionStatementStringBuilder = () => {
+  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
+  printToDom(newString, 'missionStatement');
+};
+
 const imagesStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < elizabethSanger.images.length; i++){
@@ -147,12 +153,6 @@ const imagesStringBuilder = () => {
     newString += `</div>`;
   }
   printToDom(newString, 'images');
-};
-
-
-const missionStatementStringBuilder = () => {
-  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
-  printToDom(newString, 'missionStatement');
 };
 
 
@@ -217,7 +217,7 @@ const newUpdateImages = () => {
 };
 
 const newUpdateStatements = () => {
-  let newStatements = elizabethSanger.statements.push({statement: 'All racoons must have rabies shots! I promise you!', category: 'Parks'});
+  let newStatements = elizabethSanger.statements.push({category: 'In Regards to Parks', statement: 'All racoons must have rabies shots! I promise you!'});
   statementStringBuilder();
 };
 
