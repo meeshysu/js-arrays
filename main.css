@@ -2,8 +2,23 @@
      background-color: slategray;
  }
 
-.statement {
+ #title {
+    margin: auto;
+    text-align: center;
+    border: double black 2px;
+    font-family: 'Lora', serif;
+}
+
+#statements {
     background-color: chartreuse;
     border: 1px dotted black;
     width: 50%;
 }
+
+#congressionalDistrict {
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+
+}
+
