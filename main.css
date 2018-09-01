@@ -2,12 +2,20 @@
      background-color: slategray;
  }
 
-.statement {
+ #title {
+    margin: auto;
+    text-align: center;
+    border: double black 2px;
+    font-family: 'Lora', serif;
+}
+
+#statements {
     background-color: chartreuse;
     border: 1px dotted black;
     width: 50%;
 }
 
+<<<<<<< HEAD
 .events {
     background-color: chartreuse;
     border: 1px dotted black;
@@ -15,3 +23,12 @@
     
 
 }
+=======
+#congressionalDistrict {
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+>>>>>>> 83943f7506f1e8d892f552bbecc8459f516073dd

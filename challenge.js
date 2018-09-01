@@ -129,6 +129,7 @@ const volunteersStringBuilder = () => {
     printToDom(newString, 'volunteers');
 };
 
+<<<<<<< HEAD
 
 const biographyStringBuilder = () => {
   const newString = `<p>${elizabethSanger.biography}</p>`;
@@ -155,6 +156,45 @@ const missionStatementStringBuilder = () => {
 };
 
 
+=======
+// const newVolunteerString = (newNew) => {
+//   elizabethSanger.volunteers = newNew;
+//   volunteersStringBuilder();
+// }
+// newNew.push("No thanks");
+
+// const updateVoterRegistration = (newUrl) => {
+//   elizabethSanger.voterRegistrationUrl = newUrl;
+//   voterRegistrationStringBuilder();
+// }
+// updateVoterRegistration('classtracker.zoeames.com');
+
+const biographyStringBuilder = () => {
+  const newString = `<p>${elizabethSanger.biography}</p>`;
+  printToDom(newString, 'biography');
+};
+
+
+const imagesStringBuilder = () => {
+  let newString = '';
+  for (let i = 0; i < elizabethSanger.images.length; i++){
+    newString += `<div class = "images"`;
+    newString +=   `<h4>${elizabethSanger.images[i].imageUrl}"</h4`;
+    newString +=   `<h4>${elizabethSanger.images[i].description}</h4>`;
+    newString +=   `<h4>${elizabethSanger.images[i].type}</h4>`;
+    newString += `</div>`;
+  }
+  printToDom(newString, 'images');
+};
+
+
+const missionStatementStringBuilder = () => {
+  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
+  printToDom(newString, 'missionStatement');
+};
+
+
+>>>>>>> 83943f7506f1e8d892f552bbecc8459f516073dd
 
 missionStatementStringBuilder();
 voterRegistrationStringBuilder();
@@ -168,8 +208,33 @@ imagesStringBuilder();
  
 
   //part 3:
-  const updateVoterRegistration = (newUrl) => {
-      elizabethSanger.voterRegistrationUrl = newUrl;
-      voterRegistrationStringBuilder();
+const updateVoterRegistration = (newUrl) => {
+    elizabethSanger.voterRegistrationUrl = newUrl;
+    voterRegistrationStringBuilder();
   }
 updateVoterRegistration('classtracker.zoeames.com');
+
+const updateDistrict = (newDistrict) => {
+  elizabethSanger.congressionalDistrict = newDistrict;
+  congressionalDistrictBuilder();
+}
+updateDistrict("234587");
+
+const updateDonationForm = (newForm) => {
+  elizabethSanger.donationFormUrl = newForm;
+  donationFormStringBuilder();
+}
+updateDonationForm('https://www.gourmetcheesedetective.com/American-artisanal-cheeses.html');
+
+const updateBiography = (newBio) => {
+  elizabethSanger.biography = newBio;
+  biographyStringBuilder();
+}
+updateBiography("I am better than Bobby Newport. That is all.");
+
+const updateStatement = (newStatement) => {
+  elizabethSanger.missionStatement = newStatement;
+  missionStatementStringBuilder();
+}
+updateStatement("Let's make Pawnee great again!");
+
