@@ -129,11 +129,11 @@ const volunteersStringBuilder = () => {
     printToDom(newString, 'volunteers');
 };
 
-const newVolunteerString = (newNew) => {
-  elizabethSanger.volunteers = newNew;
-  volunteersStringBuilder();
-}
-newNew.push("No thanks");
+// const newVolunteerString = (newNew) => {
+//   elizabethSanger.volunteers = newNew;
+//   volunteersStringBuilder();
+// }
+// newNew.push("No thanks");
 
 // const updateVoterRegistration = (newUrl) => {
 //   elizabethSanger.voterRegistrationUrl = newUrl;
