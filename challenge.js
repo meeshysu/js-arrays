@@ -146,8 +146,8 @@ const missionStatementStringBuilder = () => {
 const imagesStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < elizabethSanger.images.length; i++){
-    newString += `<div class = "images"`;
-    newString +=   `<h4>${elizabethSanger.images[i].imageUrl}"</h4`;
+    newString += `<div class = "images">`;
+    newString +=   `<img src='${elizabethSanger.images[i].imageUrl}'></img>`;
     newString +=   `<h4>${elizabethSanger.images[i].description}</h4>`;
     newString +=   `<h4>${elizabethSanger.images[i].type}</h4>`;
     newString += `</div>`;
@@ -212,7 +212,7 @@ const newUpdateEvent = () => {
 };
 
 const newUpdateImages = () => {
-  let newImages = elizabethSanger.images.push({imageUrl: 'https://www.oldtrapper.com', description: 'What we eat on the road', type: 'constituent jerky'})
+  let newImages = elizabethSanger.images.push({imageUrl: '', description: 'What we eat on the road', type: 'constituent jerky'})
   imagesStringBuilder();
 };
 

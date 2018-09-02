@@ -85,5 +85,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;   
+}
+
+#images imageUrl {
+    max-width: 30%;
 }
