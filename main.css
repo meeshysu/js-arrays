@@ -99,6 +99,14 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+<<<<<<< HEAD
     justify-content: space-between;
 >>>>>>> 55081463123b3e9429d1ebec2b4404d4cc3cebe0
+=======
+    justify-content: space-between;   
+}
+
+#images imageUrl {
+    max-width: 30%;
+>>>>>>> cc290fa47a1ecf0e9f420679cc4c2cc588152916
 }
