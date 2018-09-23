@@ -143,18 +143,6 @@ const missionStatementStringBuilder = () => {
   printToDom(newString, 'missionStatement');
 };
 
-<<<<<<< HEAD
-
-
-
-const biographyStringBuilder = () => {
-  const newString = `<p>${elizabethSanger.biography}</p>`;
-  printToDom(newString, 'biography');
-};
-
-
-=======
->>>>>>> 55081463123b3e9429d1ebec2b4404d4cc3cebe0
 const imagesStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < elizabethSanger.images.length; i++){
@@ -168,16 +156,6 @@ const imagesStringBuilder = () => {
 };
 
 
-<<<<<<< HEAD
-const missionStatementStringBuilder = () => {
-  const newString = `<p>Our mission statement: "${elizabethSanger.missionStatement}"</p>`;
-  printToDom(newString, 'missionStatement');
-};
-
-
-
-=======
->>>>>>> 55081463123b3e9429d1ebec2b4404d4cc3cebe0
 
 missionStatementStringBuilder();
 voterRegistrationStringBuilder();
