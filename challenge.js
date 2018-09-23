@@ -147,7 +147,7 @@ const imagesStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < elizabethSanger.images.length; i++){
     newString += `<div class = "images">`;
-    newString +=   `<img src='${elizabethSanger.images[i].imageUrl}'></img>`;
+    newString +=   `<img src='${elizabethSanger.images[i].imageUrl}' width="250px"></img>`;
     newString +=   `<h4>${elizabethSanger.images[i].description}</h4>`;
     newString +=   `<h4>${elizabethSanger.images[i].type}</h4>`;
     newString += `</div>`;
@@ -212,7 +212,7 @@ const newUpdateEvent = () => {
 };
 
 const newUpdateImages = () => {
-  let newImages = elizabethSanger.images.push({imageUrl: '', description: 'What we eat on the road', type: 'constituent jerky'})
+  let newImages = elizabethSanger.images.push({imageUrl: 'https://www.cathealth.com/images/strings_are_very_dangerous_for_cats.jpg', description: 'What we do on the road', type: 'constituent'})
   imagesStringBuilder();
 };
 

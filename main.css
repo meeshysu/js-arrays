@@ -97,9 +97,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;   
+    justify-content: space-between; 
+    align-content: center;
+    padding: 10%;
 }
 
-#images imageUrl {
-    max-width: 30%;
+#missionStatement {
+    text-align: center;
+    font-weight: bold;
 }
